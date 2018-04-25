@@ -37,6 +37,14 @@ $color-heading: #FFD053;
     font-size: 4rem;
 }
 
+@mixin styleHeader {
+    color: $color-heading;
+    font-size: 6.8rem;
+    text-align: center;
+    margin-bottom: 14rem;
+}
+
+
 // End Mixins
 
 
@@ -153,12 +161,33 @@ body {
 }
 
 .Introduction {
-
     padding: 0 26.2rem;
+    position: relative;
 
     h2 {
-        color: $color-heading;
-        font-size: 6.8rem;
-        text-align: center;
+        @include styleHeader();
     }
+    
+    .Test-container {
+        padding: inherit;
+        position: absolute;
+        right: 0;
+        font-size: 3rem;
+        max-width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+    
+        img {
+            max-width: 54rem;
+            margin-right: 9rem;
+        }
+
+        p {
+            margin-bottom: 4rem;
+        }
+
+        span {
+            color: $color-accent;
+        }
 }

@@ -1,0 +1,101 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 9;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #252627;
+  color: #f5f5f5; }
+
+.Header {
+  position: relative;
+  padding: 78px;
+  height: 105vh;
+  background: inherit;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hero.jpg);
+  clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%);
+  background-position-x: -150px;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  font-family: 'Raleway', sans-serif; }
+
+.Logo {
+  display: block;
+  width: 129px; }
+
+.Title-Card {
+  display: inline-block;
+  margin: 186px 0 0 79px;
+  text-align: center; }
+  .Title-Card h1 {
+    font-size: 7.2rem; }
+  .Title-Card .Name {
+    animation: moveInLeft 1s ease-out; }
+  .Title-Card .Title {
+    color: #2CF3EE;
+    opacity: .9;
+    margin-bottom: 40px;
+    animation: moveInRight 1s ease-out; }
+  .Title-Card .Contact-btn {
+    text-decoration: none;
+    padding: 1rem 5.3rem;
+    border: 5px solid #2CF3EE;
+    display: inline-block;
+    border-radius: 50rem;
+    color: #f5f5f5;
+    font-size: 4.2rem;
+    font-family: 'Open Sans', sans-serif; }
+
+.Navbar {
+  padding: inherit;
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500; }
+  .Navbar li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    color: #f5f5f5;
+    font-size: 4rem;
+    margin-left: 3.2rem; }
+  .Navbar a {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    color: #f5f5f5;
+    font-size: 4rem; }
+
+.Introduction {
+  padding: 0 26.2rem; }
+  .Introduction h2 {
+    color: #FFD053;
+    font-size: 6.8rem;
+    text-align: center; }

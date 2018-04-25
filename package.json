@@ -1,0 +1,22 @@
+{
+  "name": "rmcguinn.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmcguinn/rmcguinn.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmcguinn/rmcguinn.github.io/issues"
+  },
+  "homepage": "https://github.com/rmcguinn/rmcguinn.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}

@@ -34,7 +34,7 @@ $color-heading: #fcc42c;
     list-style: none;
     display: inline-block;
     color: $color-primary;
-    font-size: 4rem;
+    font-size: 3.3rem;
 }
 
 @mixin styleHeader {
@@ -46,8 +46,30 @@ $color-heading: #fcc42c;
     font-weight: 100;
 }
 
+@mixin styleSubHeader {
+    color: $color-heading;
+    font-size: 3rem;
+    text-align: center;
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
 @mixin verticalSpacing {
     margin-bottom: 12rem;
+}
+
+@mixin styleBuiltWith {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    max-width: 8.6rem;
+}
+
+@mixin styleBuiltWithSpan {
+    display: block;
+    font-size: 1.8rem;
+    margin-top: -.5rem;
 }
 
 
@@ -100,6 +122,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: $color-bg;
     color: $color-primary;
+    font-size: 2.6rem;
     position: relative;
     overflow-x: hidden; // Hides horizontal scroll introduced by the left: setting in .Header
 }
@@ -188,8 +211,7 @@ body {
         @include verticalSpacing();
     }
     
-    .Test-container {
-        font-size: 2.6rem;
+    .Intro-flex-container {
         display: flex;
         
         .Hello-img {
@@ -205,7 +227,7 @@ body {
             }
         }
 
-        .Bacon {
+        .Intro-text {
             max-width: 100%;
             flex: 2;
 
@@ -252,7 +274,6 @@ body {
         }
 
         p {
-            font-size: 2.2rem;
             text-align: center;
         }
 
@@ -266,13 +287,13 @@ body {
 
     .Responsive-container {
         max-width: 140rem;
+        @include verticalSpacing();
 
         h2 {
             margin-bottom: 4rem;
         }
 
         p {
-            font-size: 2.6rem;
             width: 50%;
             text-align: center;
             margin: 0 auto 6rem auto;
@@ -287,5 +308,80 @@ body {
 }
 
 .Dev-container {
-    @include styleHeader();
+    max-width: 140rem;
+    margin: auto;
+    h2 {
+        @include styleHeader();
+        @include verticalSpacing();
+    }
+}
+    
+.Project-img {
+    img {
+        max-width: 72.2rem;
+    }
+
+}
+
+.Project {
+    display: flex;
+}
+
+.Inner {
+    width: 50%;
+    margin: 0 auto;
+    p,h4 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    h4 {
+        @include styleSubHeader();
+    }
+}
+
+.JS {
+    @include styleBuiltWith();
+    margin: 0 25px;
+
+    span {
+        @include styleBuiltWithSpan();
+    }
+
+    img {
+        height: 8.6rem;
+    }
+}
+
+
+.CSS {
+    @include styleBuiltWith();
+    margin: 0 25px;
+    span {
+        @include styleBuiltWithSpan();
+    }
+
+    img {
+        height: 8.6rem;
+    }
+}
+
+.HTML {
+    @include styleBuiltWith();
+    margin: 0 25px;
+    span {
+        @include styleBuiltWithSpan();
+    }
+
+    img {
+        height: 8.6rem;
+    }
+}
+
+.Inner-tech {
+    padding: 0 25px;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
 }

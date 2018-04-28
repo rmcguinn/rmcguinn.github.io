@@ -137,45 +137,48 @@ body {
         margin-bottom: 12rem; }
       .Intro-container .Intro-flex-container .Intro-text span {
         color: #2CF3EE; }
-  .Intro-container .Skills-container {
-    width: 100vw;
-    max-width: inherit;
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/wood-bg.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 0;
-    display: flex;
-    margin-bottom: 12rem; }
-    .Intro-container .Skills-container h3 {
-      color: #fcc42c;
-      font-size: 6.8rem;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 8px;
-      font-weight: 100;
-      margin: 0;
-      color: #f5f5f5;
-      text-align: center; }
-    .Intro-container .Skills-container img {
-      display: block;
-      height: 25%;
-      margin: 8.6rem auto; }
-    .Intro-container .Skills-container p {
-      text-align: center; }
-    .Intro-container .Skills-container .Skill-1, .Intro-container .Skills-container .Skill-2 {
-      margin-right: 6rem; }
-  .Intro-container .Responsive-container {
-    max-width: 140rem;
-    margin-bottom: 12rem; }
-    .Intro-container .Responsive-container h2 {
-      margin-bottom: 4rem; }
-    .Intro-container .Responsive-container p {
-      width: 50%;
-      text-align: center;
-      margin: 0 auto 6rem auto; }
-    .Intro-container .Responsive-container .Mockup {
-      max-width: 100%;
-      height: auto; }
+
+.Skills-container {
+  left: calc(-50vw + 50%);
+  width: 100vw;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/wood-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  margin-bottom: 12rem; }
+  .Skills-container h3 {
+    color: #fcc42c;
+    font-size: 6.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 100;
+    margin: 0;
+    color: #f5f5f5;
+    text-align: center; }
+  .Skills-container img {
+    display: block;
+    height: 25%;
+    margin: 8.6rem auto; }
+  .Skills-container p {
+    text-align: center; }
+  .Skills-container .Skill-1, .Skills-container .Skill-2 {
+    margin-right: 6rem; }
+
+.Responsive-container {
+  max-width: 140rem;
+  margin-bottom: 12rem; }
+  .Responsive-container h2 {
+    margin-bottom: 4rem; }
+  .Responsive-container p {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 6rem auto; }
+  .Responsive-container .Mockup {
+    max-width: 100%;
+    height: auto; }
 
 .Dev-container {
   max-width: 140rem;

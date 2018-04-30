@@ -107,6 +107,17 @@ $color-heading: #fcc42c;
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
 // End Animations
 
 *,
@@ -154,7 +165,7 @@ body {
 
 .Logo {
     display: block;
-    width: 12.9rem;
+    width: 14.9rem;
 }
 
 .Title-Card {
@@ -168,6 +179,7 @@ body {
 
     .Name {
         animation: moveInLeft 1s ease-out;
+        color: #fff;
     }
 
     .Title {
@@ -179,6 +191,9 @@ body {
 
     .Contact-btn {
         @include styleButton();
+        animation: moveInBottom 500ms ease-out 750ms;
+        animation-fill-mode: backwards;
+        color: #fff;
     }
 }
 

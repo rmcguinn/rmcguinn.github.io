@@ -26,6 +26,17 @@
     opacity: 1;
     transform: translate(0); } }
 
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+  -moz-transition: opacity 500ms ease-in-out;
+  -o-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); }
+
+.b-lazy.b-loaded {
+  opacity: 1; }
+
 *,
 *::after,
 *::before {
@@ -55,12 +66,13 @@ body {
   position: relative;
   padding: 7.8rem;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hero-min.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
   background-position-x: -15rem;
   background-repeat: no-repeat;
   background-size: 110%;
   font-family: 'Raleway', sans-serif;
+  animation-fill-mode: backwards;
   margin-bottom: 12rem; }
 
 .Logo {
@@ -154,7 +166,6 @@ body {
   width: 100vw;
   max-height: 100rem;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/wood-bg-min.jpg);
   background-size: cover;
   background-position: center;
   padding: 10rem;

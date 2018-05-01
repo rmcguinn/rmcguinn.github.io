@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,500" rel="stylesheet">
+    <script src="js/blazy.js"></script>
+    <script>
+        ;(function() {
+            // Initialize
+            var bLazy = new Blazy();
+        })();
+    </script>
     <title>Ryan McGuinn</title>
 </head>
 <body>
     <div class="Wrapper">
-        <div class="Header">
+        <div class="Header b-lazy" data-src="img/hero-min.jpg">
             <img class="Logo" src="img/Logo.svg" alt="Personal Logos">
             <div class="Title-Card">
                 <h1 class="Name">Ryan McGuinn</h1>
@@ -29,7 +36,7 @@
             <h2 class="Into">Introduction</h2>
             <div class="Intro-flex-container">
                 <div class="Hello-img">
-                    <img src="img/hello.svg" alt="Guy Waving Hello">
+                    <img src="img/hello-brown.svg" alt="Guy Waving Hello">
                 </div>
                 <div class="Intro-text">
                     <p class="test-1">Hello, my name is Ryan McGuinn. I'm a <span>Web Developer</span> and <span>Designer</span> based out of Seattle, WA. I strive to create applications that are equally beautiful as they are efficient.</p>
@@ -37,7 +44,7 @@
                     <p class="test-3">For me, programming is just plain exciting. I look forward to bringing this <span>passion</span> and <span>enthusiasm</span> with me, wether that be for a great company, or to my clients as a freelancer.</p>
                 </div>
             </div>
-            <div class="Skills-container">
+            <div class="Skills-container b-lazy" data-src="img/wood-bg-min.jpg">
                 <div class="Skill-1">
                     <h3>Design</h3>
                     <img src="img/design.svg" alt="">

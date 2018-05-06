@@ -364,3 +364,16 @@ body {
   align-items: flex-end;
   width: 100%;
   justify-content: center; }
+
+.Github h3 {
+  text-align: center;
+  color: #fcc42c;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: .1rem;
+  font-weight: 100;
+  margin-bottom: 1rem; }
+
+.Github img {
+  max-height: 13rem;
+  width: auto; }

@@ -522,3 +522,18 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     width: 100%;
     justify-content: center;
 }
+
+.Github {
+    h3 {
+        text-align: center;
+        @include styleSubHeader();
+        margin-bottom: 1rem;
+    }
+
+
+    img {
+        max-height: 13rem;
+        width: auto;
+    }
+
+}

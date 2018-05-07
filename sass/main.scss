@@ -346,6 +346,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     position: relative;
     background-size: cover;
     background-position: center;
+    background: $color-bg-light;
     padding: $skills-container-padding; // TODO Make the child elements fit to the container's max-width
     padding-top: calc(#{$skills-container-padding} - 2rem);
     display: flex;
@@ -524,12 +525,12 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 }
 
 .Github {
+    @include verticalSpacing();
     h3 {
-        text-align: center;
         @include styleSubHeader();
+        text-align: center;
         margin-bottom: 1rem;
     }
-
 
     img {
         max-height: 13rem;
@@ -537,3 +538,32 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     }
 
 }
+
+.Technologies {
+    // background: $color-bg-light;
+
+    h3 {
+        @include verticalSpacing();
+        @include styleHeader();
+    }
+
+    img {
+        height: 19rem;
+    }
+
+    span {
+        @include styleBuiltWithSpan();
+        font-size: 3.6rem;
+    }
+}
+
+.Technologies-images {
+    max-width: 140rem;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+        text-align: center;
+    }
+}
+

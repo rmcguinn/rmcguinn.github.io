@@ -1,3 +1,14 @@
+// TODO
+
+// TODO Nav Links Brackets stay active when a element is clicked
+// TODO Make the child elements fit to the container's max-width
+// TODO Add fallback for JS smooth scroll
+// TODO Add fallbacks for other browsers on all required elements
+
+
+
+
+
 // Variables
 
 $color-bg: #252627;
@@ -103,7 +114,7 @@ $color-heading: #fcc42c;
         transform: translateX(-1rem);
     }
     100% {
-        opacity: .9;
+        opacity: 1;
         transform: translate(0);
     }
 }
@@ -168,7 +179,6 @@ body {
     position: relative;
     padding: 7.8rem;
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
     // Increased background image size to allow centering the subject without having the background repeat via bg-size: cover;
     background-position-x: -15rem;
@@ -201,7 +211,6 @@ body {
 
     .Title {
         color: $color-accent;
-        opacity: .9;
         margin-bottom: 4rem;
         animation: moveInRight 1s ease-out;
     }
@@ -250,8 +259,6 @@ body {
     }
     
 }
-
-// TODO Nav Links Brackets stay active when a element is clicked
 
 .Navbar a::before,
 .Navbar a::after {
@@ -347,7 +354,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     background-size: cover;
     background-position: center;
     background: $color-bg-light;
-    padding: $skills-container-padding; // TODO Make the child elements fit to the container's max-width
+    padding: $skills-container-padding; 
     padding-top: calc(#{$skills-container-padding} - 2rem);
     display: flex;
     align-items: center;

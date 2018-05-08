@@ -1,15 +1,25 @@
 const projectImage = document.querySelector('.Imagez');
-const button = document.querySelector('.Contact-btn');
+// const intro = document.querySelector('.Intro-text');
+const header = document.querySelector('.Header');
+const about = document.querySelector('.About');
+const portfolio = document.querySelector('.Portfolio');
+const intro = document.querySelector('.Intro-container');
+const projects = document.querySelector('.Dev-container');
 
-
-function imgHover() {
-    projectImage.classList.add('.Fade-in');
-    projectImage.classList.remove('.Fade-out');
+function bacon() {
+    if (header.classList.contains('b-loaded')) {
+        header.style.height = '140px';
+        console.log('Working');
+    }
+    console.log('Running');
+    // setTimeout(bacon(), 5000);
 }
-function imgHover2() {
-    projectImage.classList.add('.Fade-out');
-    projectImage.classList.remove('.Fade-in');
+bacon();
+
+function aboutScroll() {
+    intro.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
 
-// projectImage.addEventListener('mouseover', imgHover); 
-// projectImage.addEventListener('mouseleave', imgHover2); 
+function portfolioScroll() {
+    projects.scrollIntoView({ block: 'start', behavior: 'smooth'});
+}

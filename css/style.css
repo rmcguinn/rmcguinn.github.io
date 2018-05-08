@@ -136,7 +136,8 @@ body {
     display: inline-block;
     color: #f5f5f5;
     font-size: 3.3rem;
-    animation-fill-mode: backwards; }
+    animation-fill-mode: backwards;
+    color: #fff; }
 
 .Navbar a::before,
 .Navbar a::after {

@@ -1,9 +1,10 @@
 // TODO
 
-// TODO Nav Links Brackets stay active when a element is clicked
-// TODO Make the child elements fit to the container's max-width
-// TODO Add fallback for JS smooth scroll
-// TODO Add fallbacks for other browsers on all required elements
+// Fix GTR Design
+// Nav Links Brackets stay active when a element is clicked
+// Make the child elements fit to the container's max-width
+// Add fallback for JS smooth scroll
+// Add fallbacks for other browsers on all required elements
 
 
 
@@ -70,6 +71,10 @@ $color-heading: #fcc42c;
 
 @mixin verticalSpacing {
     margin-bottom: 12rem;
+}
+
+@mixin verticalSpacingSmall {
+    margin-bottom: 6rem;
 }
 
 @mixin styleBuiltWith {
@@ -272,19 +277,19 @@ body {
 }
 
 .Navbar a::before {
-	margin-right: 10px;
+	margin-right: 1rem;
 	content: '[';
-	-webkit-transform: translateX(20px);
-	-moz-transform: translateX(20px);
-	transform: translateX(20px);
+	-webkit-transform: translateX(2rem);
+	-moz-transform: translateX(2rem);
+	transform: translateX(2rem);
 }
 
 .Navbar a::after {
-	margin-left: 10px;
+	margin-left: 1rem;
 	content: ']';
-	-webkit-transform: translateX(-20px);
-	-moz-transform: translateX(-20px);
-	transform: translateX(-20px);
+	-webkit-transform: translateX(-2rem);
+	-moz-transform: translateX(-2rem);
+	transform: translateX(-2rem);
 }
 
 .Navbar a:hover::before,
@@ -296,6 +301,18 @@ body {
 	-webkit-transform: translateX(0px);
 	-moz-transform: translateX(0px);
 	transform: translateX(0px);
+}
+
+.Down-arrow {
+    max-width: 6rem;
+    height: auto;
+    position: absolute;
+    bottom: 5rem;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    opacity: .5;
+    cursor: pointer;
 }
 
 .Intro-container {
@@ -445,7 +462,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 .Project {
     display: flex;
     max-height: 100%;
-    margin-bottom: 6rem; // Half of normal vertical spacing
+    @include verticalSpacingSmall();
 }
 
 .Inner {
@@ -459,7 +476,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 
     p {
         font-size: 3rem;
-        margin-top: -8px; // Removes dead space from the top of the p to align with the img
+        margin-top: -.8rem; // Removes dead space from the top of the p to align with the img
     }
 
     h4 {
@@ -472,47 +489,13 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     }
 }
 
-.JS {
-    @include styleBuiltWith();
-    margin: 0 2.5rem;
-
-    span {
-        @include styleBuiltWithSpan();
-    }
-
-    img {
-        height: 8.6rem;
-    }
-}
-
-
-.CSS {
-    @include styleBuiltWith();
-    margin: 0 2.5rem;
-    span {
-        @include styleBuiltWithSpan();
-    }
-
-    img {
-        height: 8.6rem;
-    }
-}
-
-.HTML {
-    @include styleBuiltWith();
-    margin: 0 2.5rem;
-    span {
-        @include styleBuiltWithSpan();
-    }
-
-    img {
-        height: 8.6rem;
-    }
-}
-
+.JS,
+.CSS,
+.HTML,
 .Bootstrap {
     @include styleBuiltWith();
     margin: 0 2.5rem;
+
     span {
         @include styleBuiltWithSpan();
     }
@@ -569,9 +552,35 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     max-width: 140rem;
     display: flex;
     justify-content: space-between;
+    @include verticalSpacing();
 
     span {
         text-align: center;
     }
 }
 
+.Design-container {
+    h3 {
+        @include styleHeader();
+        @include verticalSpacing();
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .GTR {
+        @include verticalSpacingSmall();
+    }
+}
+
+.Plop-container {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    justify-content: space-between;
+    @include verticalSpacingSmall();
+
+    img {
+        height: 100%;
+    }
+}

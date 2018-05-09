@@ -149,18 +149,18 @@ body {
   color: #2CF3EE; }
 
 .Navbar a::before {
-  margin-right: 10px;
+  margin-right: 1rem;
   content: '[';
-  -webkit-transform: translateX(20px);
-  -moz-transform: translateX(20px);
-  transform: translateX(20px); }
+  -webkit-transform: translateX(2rem);
+  -moz-transform: translateX(2rem);
+  transform: translateX(2rem); }
 
 .Navbar a::after {
-  margin-left: 10px;
+  margin-left: 1rem;
   content: ']';
-  -webkit-transform: translateX(-20px);
-  -moz-transform: translateX(-20px);
-  transform: translateX(-20px); }
+  -webkit-transform: translateX(-2rem);
+  -moz-transform: translateX(-2rem);
+  transform: translateX(-2rem); }
 
 .Navbar a:hover::before,
 .Navbar a:hover::after,
@@ -170,6 +170,17 @@ body {
   -webkit-transform: translateX(0px);
   -moz-transform: translateX(0px);
   transform: translateX(0px); }
+
+.Down-arrow {
+  max-width: 6rem;
+  height: auto;
+  position: absolute;
+  bottom: 5rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  opacity: .5;
+  cursor: pointer; }
 
 .Intro-container {
   margin: 0 auto;
@@ -291,7 +302,7 @@ body {
     margin: 0 auto; }
   .Inner p {
     font-size: 3rem;
-    margin-top: -8px; }
+    margin-top: -.8rem; }
   .Inner h4 {
     color: #fcc42c;
     font-size: 3rem;
@@ -304,55 +315,25 @@ body {
     left: 0;
     right: 0; }
 
-.JS {
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  max-width: 8.6rem;
-  margin: 0 2.5rem; }
-  .JS span {
-    display: block;
-    font-size: 1.8rem;
-    margin-top: -.5rem; }
-  .JS img {
-    height: 8.6rem; }
-
-.CSS {
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  max-width: 8.6rem;
-  margin: 0 2.5rem; }
-  .CSS span {
-    display: block;
-    font-size: 1.8rem;
-    margin-top: -.5rem; }
-  .CSS img {
-    height: 8.6rem; }
-
-.HTML {
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  max-width: 8.6rem;
-  margin: 0 2.5rem; }
-  .HTML span {
-    display: block;
-    font-size: 1.8rem;
-    margin-top: -.5rem; }
-  .HTML img {
-    height: 8.6rem; }
-
+.JS,
+.CSS,
+.HTML,
 .Bootstrap {
   vertical-align: top;
   display: inline-block;
   text-align: center;
   max-width: 8.6rem;
   margin: 0 2.5rem; }
+  .JS span,
+  .CSS span,
+  .HTML span,
   .Bootstrap span {
     display: block;
     font-size: 1.8rem;
     margin-top: -.5rem; }
+  .JS img,
+  .CSS img,
+  .HTML img,
   .Bootstrap img {
     height: 8.6rem; }
 
@@ -400,6 +381,32 @@ body {
 .Technologies-images {
   max-width: 140rem;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 12rem; }
   .Technologies-images span {
     text-align: center; }
+
+.Design-container h3 {
+  color: #fcc42c;
+  font-size: 6.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .8rem;
+  font-weight: 100;
+  margin-bottom: 12rem; }
+
+.Design-container img {
+  max-width: 100%;
+  height: auto; }
+
+.Design-container .GTR {
+  margin-bottom: 6rem; }
+
+.Plop-container {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  justify-content: space-between;
+  margin-bottom: 6rem; }
+  .Plop-container img {
+    height: 100%; }

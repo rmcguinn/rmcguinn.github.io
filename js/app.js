@@ -5,6 +5,7 @@ const about = document.querySelector('.About');
 const portfolio = document.querySelector('.Portfolio');
 const intro = document.querySelector('.Intro-container');
 const projects = document.querySelector('.Dev-container');
+const github = document.querySelector('.Github-img');
 
 // function bacon() {
 //     if (header.classList.contains('b-loaded')) {
@@ -23,3 +24,9 @@ function aboutScroll() {
 function portfolioScroll() {
     projects.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
+
+function githubRedirect() {
+    console.log('Hell Yeah');
+}
+
+github.addEventListener('click', githubRedirect);

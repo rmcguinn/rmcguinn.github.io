@@ -167,7 +167,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     background: $color-bg;
     color: $color-primary;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     position: relative;
     overflow-x: hidden; // Hides horizontal scroll introduced by the left: setting in .Header
 }
@@ -372,14 +372,15 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     position: relative;
     background-size: cover;
     background-position: center;
-    padding: $skills-container-padding; 
+    // padding: $skills-container-padding; 
     padding-top: calc(#{$skills-container-padding} - 2rem);
     display: flex;
-    align-items: center;
+    justify-content: space-between;
     @include verticalSpacing();
 
     h3 {
         @include styleHeader();
+        font-size: 6rem;
         margin: 0;
         color: #f5f5f5;
         text-align: center;
@@ -387,21 +388,22 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 
     img {
         display: block;
-        max-height: 23.5rem;
+        max-height: 18.5rem;
         width: auto;
-        margin: 8.6rem auto;
+        margin: 8rem auto;
     }
 
     p {
         text-align: center;
     }
 
-    .Skill-1, .Skill-2 {
-        margin-right: 6rem;
+    .Skill-1, .Skill-2, .Skill-3 {
+        width: 30%;
     }
 
-    .Skill-1, .Skill-2, .Skill-3 {
-    }
+    // .Skill-1, .Skill-2 {
+    //     margin-right: 6rem;
+    // }
 }
 
 .Responsive-container {
@@ -453,11 +455,6 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
         opacity: 1;
         transition: opacity 300ms ease-out;
     }
-
-    img:hover {
-        // content:url("../img/voicinator.png");
-    }
-
 }
 
 .Project {
@@ -603,12 +600,45 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     @include verticalSpacing();
 
     img {
-        height: 16rem;
+        height: 14rem;
     }
 
     span {
         @include styleBuiltWithSpan();
         font-size: 3rem;
         text-align: center;
+    }
+}
+
+
+// Start of media query
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 20%;
+    }
+
+    .Plop-container {
+        flex-direction: column;
+    }
+
+    .Header {
+        height: 100vw;
+    }
+
+    .Project {
+        flex-wrap: wrap;
+    }
+
+    .Technologies-images {
+        img {
+            height: 55px;
+        }
+    }
+
+    .Adobe-tech {
+        img {
+            height: 55px;
+        }
     }
 }

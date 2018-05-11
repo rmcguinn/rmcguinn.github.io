@@ -13,23 +13,34 @@
             var bLazy = new Blazy();
         })();
     </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <title>Ryan McGuinn</title>
 </head>
 <body>
     <div class="Wrapper">
-        <div class="Header" data-src="img/hero-min.jpg">
-            <img class="Logo" src="img/Logo.svg" alt="Personal Logos">
+        <div class="Hero" data-src="img/hero-min.jpg">
             <div class="Title-Card">
                 <h1 class="Name">Ryan McGuinn</h1>
                 <h1 class="Title">Web Developer</h1>
                 <a class="Contact-btn" href="#">Contact Me</a>
             </div>
-            <nav class="Navbar">
-                <ul>
-                    <li><a class="About" href="#" onclick="aboutScroll(); return false">About</a></li>
-                    <li><a class="Portfolio" href="#" onclick="portfolioScroll(); return false">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+            <nav class="Navbar-container">
+                <img class="Logo" src="img/Logo.svg" alt="Personal Logos">
+                <div class="Navbar">
+                    <ul>
+                        <li><a class="About" href="#" onclick="aboutScroll(); return false">About</a></li>
+                        <li><a class="Portfolio" href="#" onclick="portfolioScroll(); return false">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
             <img class="Down-arrow" onclick="aboutScroll(); return false" src="img/down-arrow.svg" alt="Down Arrow">
         </div>

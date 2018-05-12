@@ -38,7 +38,7 @@
                     <ul>
                         <li><a class="About" href="#" onclick="aboutScroll(); return false">About</a></li>
                         <li><a class="Portfolio" href="#" onclick="portfolioScroll(); return false">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" onclick="contactScroll(); return false">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -108,7 +108,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="Project">
                     <div class="Project-img-container">
                         <a href="https://ryanmcguinn.com/Photography-Site/">
@@ -138,8 +137,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
+                </div>              
                 <div class="Project">
                     <div class="Project-img-container">
                         <a href="https://ryanmcguinn.com/Whack-A-Mole/">
@@ -166,7 +164,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="Project">
                     <div class="Project-img-container">
                         <a href="https://ryanmcguinn.com/Wanderlust/">
@@ -266,6 +263,17 @@
                     <span>Premiere</span>
                 </div>
             </div>
+        </div>
+        <div class="Contact">
+            <h2>Let's Work Together</h2>
+            <form action="https://formspree.io/rmcguinn94@gmail.com" method="POST">
+                <div class="Contact-info">
+                    <label><span>Name</span><input type="text" name="Name" required></label>
+                    <label><span>Email</span><input type="email" name="Sender" required></label>
+                </div>
+                <label><span>Tell me about your inquiry</span><textarea name="Message" cols="30" rows="6" required></textarea></label>
+                <div class="Contact-submit"><input type="submit" value="Send"></div>
+            </form>
         </div>
     </div>
     <script src="js/app.js"></script>

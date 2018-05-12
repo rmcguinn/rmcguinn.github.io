@@ -14,6 +14,7 @@ const logo = document.querySelector('.Logo');
 let topOfNav = nav.offsetTop;
 let bottomOfHero = hero.getBoundingClientRect().bottom;
 const wrapper = document.querySelector('.Wrapper');
+const contact = document.querySelector('.Contact');
 
 function aboutScroll() {
     intro.scrollIntoView({ block: 'start', behavior: 'smooth'});
@@ -23,6 +24,10 @@ function portfolioScroll() {
     projects.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
 
+function contactScroll() {
+    contact.scrollIntoView({ block: 'start', behavior: 'smooth'});
+}
+
 function stickyNav() {
     if (window.scrollY >= bottomOfHero) {
         navCont.style.position = 'fixed';
@@ -30,7 +35,8 @@ function stickyNav() {
         nav.style.height = '10rem';
         navCont.style.top = '0';
         nav.style.top = '0';
-        navCont.style.background = 'rgba(40, 40, 62, .95)';
+        navCont.style.background = 'rgba(37, 38, 39)';
+        navCont.style.borderBottom = '2px solid #f5f5f5';
         logo.style.height = '10rem';
     } else {
         navCont.style.position = '';

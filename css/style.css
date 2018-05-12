@@ -88,13 +88,13 @@ body {
     animation: moveInLeft 1s ease-out;
     color: #fff; }
   .Title-Card .Title {
-    color: #2CF3EE;
+    color: #2bf3ec;
     margin-bottom: 4rem;
     animation: moveInRight 1s ease-out; }
   .Title-Card .Contact-btn {
     text-decoration: none;
     padding: 1rem 5.3rem;
-    border: 0.5rem solid #2CF3EE;
+    border: 0.5rem solid #2bf3ec;
     display: inline-block;
     border-radius: 50rem;
     color: #f5f5f5;
@@ -154,7 +154,7 @@ body {
   -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
   -moz-transition: -moz-transform 0.3s, opacity 0.2s;
   transition: transform 0.3s, opacity 0.2s;
-  color: #2CF3EE; }
+  color: #2bf3ec; }
 
 .Navbar a::before {
   margin-right: 1rem;
@@ -221,7 +221,7 @@ body {
       .Intro-container .Intro-flex-container .Intro-text p:nth-child(3) {
         margin-bottom: 12rem; }
       .Intro-container .Intro-flex-container .Intro-text span {
-        color: #2CF3EE; }
+        color: #2bf3ec; }
 
 .Skills-container {
   max-height: 100rem;
@@ -442,6 +442,82 @@ body {
     font-size: 3rem;
     text-align: center; }
 
+.Contact h2 {
+  color: #fcc42c;
+  font-size: 6.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .8rem;
+  font-weight: 100;
+  margin-bottom: 12rem; }
+
+.Contact form {
+  max-width: 45rem;
+  margin: 0 auto 5rem; }
+
+.Contact .Contact-submit {
+  text-align: right; }
+
+.Contact [type="submit"] {
+  background: #2bf3ec;
+  color: #252627;
+  font-weight: bold;
+  font-size: 2rem;
+  width: 33%;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+  transform: translate(0);
+  box-shadow: none;
+  transition: transform 200ms ease-out; }
+  .Contact [type="submit"]:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.25);
+    transition: transform 200ms ease-out; }
+  .Contact [type="submit"]:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25); }
+
+.Contact input, .Contact textarea {
+  border: 3px solid #3B3D3E;
+  background: #3B3D3E;
+  color: #f5f5f5;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: 'Open Sans', serif; }
+  .Contact input:focus, .Contact textarea:focus {
+    outline: none;
+    border-color: #2bf3ec; }
+
+.Contact textarea {
+  resize: none; }
+
+.Contact label {
+  display: block;
+  margin-bottom: 3rem; }
+
+.Contact span {
+  display: block;
+  color: #2bf3ec;
+  margin-bottom: 1rem; }
+
+.Contact-info label {
+  width: 50%;
+  float: left; }
+  .Contact-info label:nth-child(1) {
+    padding-right: 1rem; }
+  .Contact-info label:nth-child(2) {
+    padding-left: 1rem; }
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #252627; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5; }
+
 @media screen and (max-width: 400px) {
   html {
     font-size: 20%; }
@@ -455,10 +531,3 @@ body {
     height: 55px; }
   .Adobe-tech img {
     height: 55px; } }
-
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #252627; }
-
-::-webkit-scrollbar-thumb {
-  background-color: #f5f5f5; }

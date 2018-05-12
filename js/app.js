@@ -35,7 +35,8 @@ function stickyNav() {
         nav.style.height = '10rem';
         navCont.style.top = '0';
         nav.style.top = '0';
-        navCont.style.background = 'rgba(37, 38, 39)';
+        navCont.style.background = 'inherit';
+        navCont.style.zIndex = '999';
         navCont.style.borderBottom = '2px solid #f5f5f5';
         logo.style.height = '10rem';
     } else {
@@ -45,6 +46,7 @@ function stickyNav() {
         navCont.style.top = '';
         nav.style.top = '';
         navCont.style.background = '';
+        navCont.style.borderBottom = '';
         logo.style.height = '';
     }
 }

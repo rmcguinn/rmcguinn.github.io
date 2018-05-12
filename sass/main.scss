@@ -1,8 +1,6 @@
 // TODO
 
-// Add resume download option
 // Add footer
-// Nav Links Brackets stay active when a element is clicked
 // Add fallback for JS smooth scroll
 // Add fallbacks for other browsers on all required elements
 
@@ -635,8 +633,46 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
         @include verticalSpacing();
     }
 
+    .Download {
+        display: flex;
+        justify-content: center;
+        @include verticalSpacing();
+        
+        a {
+            display: block;
+            max-width: 30%;
+            text-decoration: none;
+            color: $color-primary;
+            border: .5rem solid $color-accent;
+            padding: 2rem 5.3rem;
+            border-radius: 100px;
+            transform: translate(0);
+            box-shadow: none;
+            transition: all 200ms ease-out;
+
+            &:hover {
+                transform: translateY(-.3rem);
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+                transition: all 200ms ease-out;
+            }
+
+            &:active {
+                transform: translateY(-.1rem);
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .25);
+            }
+        }
+        
+        i {
+            padding-right: 2rem;
+            font-size: 3rem;
+            transform: translate(0);
+            box-shadow: none;
+            transition: all 200ms ease-out;
+        }
+    }
+
     form {
-        max-width: 45rem;
+        max-width: 50rem;
         margin: 0 auto 5rem;
     }
     
@@ -645,10 +681,12 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     }
     
     [type="submit"] {
-        background: $color-accent;
-        color: $color-bg;
+        background: $color-bg-light;
+        color: $color-accent;
         font-weight: bold;
         font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
         width: 33%;
         border: none;
         border-radius: 100px;
@@ -661,7 +699,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
         &:hover {
             transform: translateY(-.3rem);
             box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .25);
-            transition: transform 200ms ease-out;
+            transition: all 200ms ease-out;
         }
 
         &:active {

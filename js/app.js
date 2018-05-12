@@ -1,8 +1,10 @@
 const projectImage = document.querySelector('.Imagez');
-// const intro = document.querySelector('.Intro-text');
 const header = document.querySelector('.Header');
-const about = document.querySelector('.About');
-const portfolio = document.querySelector('.Portfolio');
+const aboutNav = document.querySelector('.About-nav');
+const projectsNav = document.querySelector('.Projects-nav');
+const contactNav = document.querySelector('.Contact-nav');
+const contactBtn = document.querySelector('.Contact-btn');
+const downArrow = document.querySelector('.Down-arrow');
 const intro = document.querySelector('.Intro-container');
 const projects = document.querySelector('.Dev-container');
 const github = document.querySelector('.Github-img');
@@ -20,12 +22,19 @@ function aboutScroll() {
     intro.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
 
-function portfolioScroll() {
+function projectScroll() {
+    console.log('Portfolio');
     projects.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
 
 function contactScroll() {
+    console.log('Contact');
     contact.scrollIntoView({ block: 'start', behavior: 'smooth'});
+}
+
+function logoScroll() {
+    // document.body.scrollTop = document.documentElement.scrollTop = 0;
+    document.body.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
 
 function stickyNav() {
@@ -39,6 +48,7 @@ function stickyNav() {
         navCont.style.zIndex = '999';
         navCont.style.borderBottom = '2px solid #f5f5f5';
         logo.style.height = '10rem';
+        logo.style.cursor = 'pointer';
     } else {
         navCont.style.position = '';
         navCont.style.height = '';
@@ -52,3 +62,9 @@ function stickyNav() {
 }
 
 window.addEventListener('scroll', stickyNav);
+logo.addEventListener('click', logoScroll);
+aboutNav.addEventListener('click', aboutScroll);
+projectsNav.addEventListener('click', projectScroll);
+contactNav.addEventListener('click', contactScroll);
+downArrow.addEventListener('click', aboutScroll);
+contactBtn.addEventListener('click', contactScroll);

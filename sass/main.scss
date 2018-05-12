@@ -239,6 +239,7 @@ body {
         transition: all 200ms linear;
         transform: translate(0);
         box-shadow: none;
+        cursor: pointer;
     }
 
     .Contact-btn:hover {
@@ -281,6 +282,7 @@ body {
     a {
         @include styleList();
         color: #fff;
+        cursor: pointer;
     }
     
 }

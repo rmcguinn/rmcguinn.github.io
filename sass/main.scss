@@ -1,7 +1,7 @@
 // TODO
 
-// Add footer
 // Add 404
+// Fix header scroll blocking elements
 // Add fallback for JS smooth scroll
 // Add fallbacks for other browsers on all required elements
 
@@ -558,25 +558,21 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
         @include verticalSpacing();
         @include styleHeader();
     }
-
-    img {
-        height: 16rem;
-    }
-
-    span {
-        @include styleBuiltWithSpan();
-        font-size: 3.4rem;
-    }
 }
 
 .Technologies-images {
     max-width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     @include verticalSpacing();
-
+    
+    img {
+        height: 13rem;
+    }
     span {
         text-align: center;
+        @include styleBuiltWithSpan();
+        font-size: 2.6rem;
     }
 }
 
@@ -620,13 +616,13 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     @include verticalSpacing();
 
     img {
-        height: 12rem;
+        height: 10rem;
     }
 
     span {
         @include styleBuiltWithSpan();
         text-align: center;
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 }
 

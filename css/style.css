@@ -379,21 +379,20 @@ body {
     text-transform: uppercase;
     letter-spacing: .8rem;
     font-weight: 100; }
-  .Technologies img {
-    height: 16rem; }
-  .Technologies span {
-    display: block;
-    font-size: 1.8rem;
-    margin-top: -.5rem;
-    font-size: 3.4rem; }
 
 .Technologies-images {
   max-width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 12rem; }
+  .Technologies-images img {
+    height: 13rem; }
   .Technologies-images span {
-    text-align: center; }
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+    margin-top: -.5rem;
+    font-size: 2.6rem; }
 
 .Design-container h3 {
   color: #fcc42c;
@@ -435,13 +434,13 @@ body {
   justify-content: space-around;
   margin-bottom: 12rem; }
   .Adobe-tech img {
-    height: 12rem; }
+    height: 10rem; }
   .Adobe-tech span {
     display: block;
     font-size: 1.8rem;
     margin-top: -.5rem;
     text-align: center;
-    font-size: 2.4rem; }
+    font-size: 2.2rem; }
 
 .Contact h2 {
   color: #fcc42c;

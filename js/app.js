@@ -11,10 +11,9 @@ const github = document.querySelector('.Github-img');
 const nav = document.querySelector('.Navbar');
 const navCont = document.querySelector('.Navbar-container');
 const hero = document.querySelector('.Hero');
-const introd = document.querySelector('.Intro-container');
 const logo = document.querySelector('.Logo');
 let topOfNav = nav.offsetTop;
-let bottomOfHero = hero.getBoundingClientRect().bottom;
+const bottomOfHero = hero.getBoundingClientRect().bottom;
 const wrapper = document.querySelector('.Wrapper');
 const contact = document.querySelector('.Contact');
 
@@ -44,7 +43,7 @@ function stickyNav() {
         nav.style.height = '8rem';
         navCont.style.top = '0';
         nav.style.top = '0';
-        navCont.style.background = 'inherit';
+        navCont.style.background = '#3B3D3E';
         navCont.style.zIndex = '999';
         logo.style.height = '8rem';
         logo.style.cursor = 'pointer';

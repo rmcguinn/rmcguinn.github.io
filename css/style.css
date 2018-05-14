@@ -308,7 +308,6 @@ body {
     text-align: center;
     margin: 0 auto; }
   .Inner p {
-    font-size: 3rem;
     margin-top: -.8rem; }
   .Inner h4 {
     color: #fcc42c;
@@ -433,16 +432,16 @@ body {
 .Adobe-tech {
   max-width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 12rem; }
   .Adobe-tech img {
-    height: 14rem; }
+    height: 12rem; }
   .Adobe-tech span {
     display: block;
     font-size: 1.8rem;
     margin-top: -.5rem;
-    font-size: 3rem;
-    text-align: center; }
+    text-align: center;
+    font-size: 2.4rem; }
 
 .Contact h2 {
   color: #fcc42c;
@@ -558,22 +557,29 @@ footer {
     display: flex;
     width: 15%;
     justify-content: space-around; }
+    footer .Social-icons a {
+      color: #f5f5f5; }
     footer .Social-icons i {
       font-size: 3rem;
       border: 2px solid #808080;
       border-radius: 50%;
       padding: 1.5rem;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 250ms ease-out; }
       footer .Social-icons i:hover {
         background: #29e4de;
         border-color: transparent;
-        color: #252627; }
+        color: #252627;
+        transition: all 250ms ease-out; }
   footer img, footer p, footer .Social-icons {
     margin-bottom: 2rem; }
+  footer p, footer .Footer-built-with {
+    color: #cfcfcf; }
   footer .fa-copyright {
     font-size: 2rem; }
-  footer .Mouse {
-    font-size: 2rem; }
+  footer .Footer-built-with {
+    font-size: 2rem;
+    margin-bottom: 0; }
   footer .Footer-tech {
     display: flex;
     justify-content: space-around;

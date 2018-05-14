@@ -492,7 +492,6 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     }
 
     p {
-        font-size: 3rem;
         margin-top: -.8rem; // Removes dead space from the top of the p to align with the img
     }
 
@@ -534,12 +533,13 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 
 .Github {
     @include verticalSpacing();
+
     h3 {
         @include styleSubHeader();
         text-align: center;
         margin-bottom: 1rem;
     }
-
+    
     img {
         max-height: 13rem;
         width: auto;
@@ -616,17 +616,17 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 .Adobe-tech {
     max-width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     @include verticalSpacing();
 
     img {
-        height: 14rem;
+        height: 12rem;
     }
 
     span {
         @include styleBuiltWithSpan();
-        font-size: 3rem;
         text-align: center;
+        font-size: 2.4rem;
     }
 }
 
@@ -774,6 +774,10 @@ footer {
         display: flex;
         width: 15%;
         justify-content: space-around;
+
+        a {
+            color: $color-primary;
+        }
         
         i {
             font-size: 3rem;
@@ -781,11 +785,13 @@ footer {
             border-radius: 50%;
             padding: 1.5rem;
             cursor: pointer;
+            transition: all 250ms ease-out;
     
             &:hover {
                 background: $color-accent;
                 border-color: transparent;
                 color: $color-bg;
+                transition: all 250ms ease-out;
             }
         }
     }
@@ -794,12 +800,17 @@ footer {
         margin-bottom: 2rem;
     }
 
+    p, .Footer-built-with {
+        color: darken($color: $color-primary, $amount: 15)
+    }
+
     .fa-copyright {
         font-size: 2rem;
     }
 
-    .Mouse {
+    .Footer-built-with {
         font-size: 2rem;
+        margin-bottom: 0;
     }
 
     .Footer-tech {

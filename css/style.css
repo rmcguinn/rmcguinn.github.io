@@ -56,7 +56,7 @@ body {
   overflow-x: hidden; }
 
 .Wrapper {
-  max-width: 140rem;
+  max-width: 65%;
   margin: 0 auto; }
 
 .Hero {
@@ -88,13 +88,13 @@ body {
     animation: moveInLeft 1s ease-out;
     color: #fff; }
   .Title-Card .Title {
-    color: #2bf3ec;
+    color: #29e4de;
     margin-bottom: 4rem;
     animation: moveInRight 1s ease-out; }
   .Title-Card .Contact-btn {
     text-decoration: none;
     padding: 1rem 5.3rem;
-    border: 0.5rem solid #2bf3ec;
+    border: 0.5rem solid #29e4de;
     display: inline-block;
     border-radius: 50rem;
     color: #f5f5f5;
@@ -156,7 +156,7 @@ body {
   -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
   -moz-transition: -moz-transform 0.3s, opacity 0.2s;
   transition: transform 0.3s, opacity 0.2s;
-  color: #2bf3ec; }
+  color: #29e4de; }
 
 .Navbar a::before {
   margin-right: 1rem;
@@ -194,7 +194,7 @@ body {
 .Intro-container {
   margin: 0 auto;
   box-sizing: border-box;
-  max-width: 140rem; }
+  max-width: 100%; }
   .Intro-container h2 {
     color: #fcc42c;
     font-size: 6.8rem;
@@ -223,7 +223,7 @@ body {
       .Intro-container .Intro-flex-container .Intro-text p:nth-child(3) {
         margin-bottom: 12rem; }
       .Intro-container .Intro-flex-container .Intro-text span {
-        color: #2bf3ec; }
+        color: #29e4de; }
 
 .Skills-container {
   max-height: 100rem;
@@ -269,7 +269,7 @@ body {
     height: auto; }
 
 .Dev-container {
-  max-width: 140rem;
+  max-width: 100%;
   margin: auto; }
   .Dev-container h2 {
     color: #fcc42c;
@@ -370,26 +370,26 @@ body {
 .Github-img {
   width: 2rem; }
 
-.Technologies h3 {
-  margin-bottom: 12rem;
-  color: #fcc42c;
-  font-size: 6.8rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .8rem;
-  font-weight: 100; }
-
-.Technologies img {
-  height: 16rem; }
-
-.Technologies span {
-  display: block;
-  font-size: 1.8rem;
-  margin-top: -.5rem;
-  font-size: 3.4rem; }
+.Technologies {
+  max-width: 100%; }
+  .Technologies h3 {
+    margin-bottom: 12rem;
+    color: #fcc42c;
+    font-size: 6.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    font-weight: 100; }
+  .Technologies img {
+    height: 16rem; }
+  .Technologies span {
+    display: block;
+    font-size: 1.8rem;
+    margin-top: -.5rem;
+    font-size: 3.4rem; }
 
 .Technologies-images {
-  max-width: 140rem;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 12rem; }
@@ -431,7 +431,7 @@ body {
   margin-bottom: 12rem; }
 
 .Adobe-tech {
-  max-width: 140rem;
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 12rem; }
@@ -459,10 +459,10 @@ body {
   margin-bottom: 12rem; }
   .Contact .Download a {
     display: block;
-    max-width: 30%;
+    max-width: 40%;
     text-decoration: none;
     color: #f5f5f5;
-    border: 0.5rem solid #2bf3ec;
+    border: 0.5rem solid #29e4de;
     padding: 2rem 5.3rem;
     border-radius: 100px;
     transform: translate(0);
@@ -484,14 +484,14 @@ body {
 
 .Contact form {
   max-width: 50rem;
-  margin: 0 auto 5rem; }
+  margin: 0 auto 14rem; }
 
 .Contact .Contact-submit {
   text-align: right; }
 
 .Contact [type="submit"] {
   background: #3B3D3E;
-  color: #2bf3ec;
+  color: #29e4de;
   font-weight: bold;
   font-size: 2rem;
   text-transform: uppercase;
@@ -522,7 +522,7 @@ body {
   font-family: 'Open Sans', serif; }
   .Contact input:focus, .Contact textarea:focus {
     outline: none;
-    border-color: #2bf3ec; }
+    border-color: #29e4de; }
 
 .Contact textarea {
   resize: none; }
@@ -533,7 +533,7 @@ body {
 
 .Contact span {
   display: block;
-  color: #2bf3ec;
+  color: #29e4de;
   margin-bottom: 1rem; }
 
 .Contact-info label {
@@ -543,6 +543,43 @@ body {
     padding-right: 1rem; }
   .Contact-info label:nth-child(2) {
     padding-left: 1rem; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100vw;
+  margin-bottom: 0;
+  background: #3B3D3E; }
+  footer img {
+    max-height: 8rem; }
+  footer .Social-icons {
+    display: flex;
+    width: 15%;
+    justify-content: space-around; }
+    footer .Social-icons i {
+      font-size: 3rem;
+      border: 2px solid #808080;
+      border-radius: 50%;
+      padding: 1.5rem;
+      cursor: pointer; }
+      footer .Social-icons i:hover {
+        background: #29e4de;
+        border-color: transparent;
+        color: #252627; }
+  footer img, footer p, footer .Social-icons {
+    margin-bottom: 2rem; }
+  footer .fa-copyright {
+    font-size: 2rem; }
+  footer .Mouse {
+    font-size: 2rem; }
+  footer .Footer-tech {
+    display: flex;
+    justify-content: space-around;
+    width: 15%; }
+    footer .Footer-tech img {
+      max-width: 4.5rem; }
 
 ::-webkit-scrollbar {
   width: 8px;

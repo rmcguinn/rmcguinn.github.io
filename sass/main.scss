@@ -1,6 +1,7 @@
 // TODO
 
 // Add footer
+// Add 404
 // Add fallback for JS smooth scroll
 // Add fallbacks for other browsers on all required elements
 
@@ -13,7 +14,7 @@
 $color-bg: #252627;
 $color-bg-light: #3B3D3E;
 $color-primary: #f5f5f5;
-$color-accent: hsl(178, 89%, 56%);
+$color-accent: #29e4de;
 $color-heading: #fcc42c;
 
 $padding-hero: 7.8rem;
@@ -175,7 +176,8 @@ body {
 }
 
 .Wrapper {
-    max-width: 140rem;
+    // max-width: 140rem;
+    max-width: 65%;
     margin: 0 auto;
 }
 
@@ -337,7 +339,7 @@ body {
     // padding: 0 24rem;
     margin: 0 auto;
     box-sizing: border-box;
-    max-width: 140rem;
+    max-width: 100%;
 
     h2 {
         @include styleHeader();
@@ -444,7 +446,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 }
 
 .Dev-container {
-    max-width: 140rem;
+    max-width: 100%;
     margin: auto;
     h2 {
         @include styleHeader();
@@ -550,6 +552,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 
 .Technologies {
     // background: $color-bg-light;
+    max-width: 100%;
 
     h3 {
         @include verticalSpacing();
@@ -567,7 +570,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 }
 
 .Technologies-images {
-    max-width: 140rem;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     @include verticalSpacing();
@@ -611,7 +614,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 }
 
 .Adobe-tech {
-    max-width: 140rem;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     @include verticalSpacing();
@@ -640,7 +643,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
         
         a {
             display: block;
-            max-width: 30%;
+            max-width: 40%;
             text-decoration: none;
             color: $color-primary;
             border: .5rem solid $color-accent;
@@ -673,7 +676,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 
     form {
         max-width: 50rem;
-        margin: 0 auto 5rem;
+        margin: 0 auto 14rem;
     }
     
     .Contact-submit {
@@ -753,6 +756,67 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
         }
     }
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    width: 100vw;
+    margin-bottom: 0;
+    background: $color-bg-light;
+
+    img {
+        max-height: 8rem;
+    }
+
+    .Social-icons {
+        display: flex;
+        width: 15%;
+        justify-content: space-around;
+        
+        i {
+            font-size: 3rem;
+            border: 2px solid #808080;
+            border-radius: 50%;
+            padding: 1.5rem;
+            cursor: pointer;
+    
+            &:hover {
+                background: $color-accent;
+                border-color: transparent;
+                color: $color-bg;
+            }
+        }
+    }
+
+    img, p, .Social-icons {
+        margin-bottom: 2rem;
+    }
+
+    .fa-copyright {
+        font-size: 2rem;
+    }
+
+    .Mouse {
+        font-size: 2rem;
+    }
+
+    .Footer-tech {
+        display: flex;
+        justify-content: space-around;
+        width: 15%;
+
+        img {
+            max-width: 4.5rem;
+        }
+    }
+}
+
+
+
+
+
 
 // Scrollbar
 

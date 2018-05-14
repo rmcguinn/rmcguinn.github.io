@@ -40,14 +40,13 @@ function logoScroll() {
 function stickyNav() {
     if (window.scrollY >= bottomOfHero) {
         navCont.style.position = 'fixed';
-        navCont.style.height = '10rem';
-        nav.style.height = '10rem';
+        navCont.style.height = '8rem';
+        nav.style.height = '8rem';
         navCont.style.top = '0';
         nav.style.top = '0';
         navCont.style.background = 'inherit';
         navCont.style.zIndex = '999';
-        navCont.style.borderBottom = '2px solid #f5f5f5';
-        logo.style.height = '10rem';
+        logo.style.height = '8rem';
         logo.style.cursor = 'pointer';
     } else {
         navCont.style.position = '';
@@ -56,7 +55,6 @@ function stickyNav() {
         navCont.style.top = '';
         nav.style.top = '';
         navCont.style.background = '';
-        navCont.style.borderBottom = '';
         logo.style.height = '';
     }
 }

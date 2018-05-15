@@ -1,0 +1,151 @@
+$color-bg: #252627;
+$color-bg-light: #3B3D3E;
+$color-primary: #f5f5f5;
+$color-accent: #29e4de;
+$color-heading: #fcc42c;
+
+
+@mixin normalize {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin styleButton {
+    text-decoration: none;
+    padding: 1rem 5.3rem;
+    border: .5rem solid $color-accent;
+    display: inline-block;
+    border-radius: 50rem;
+    color: $color-primary;
+    font-size: 4.2rem;
+    font-family: 'Open Sans',
+    sans-serif;
+}
+
+@mixin styleList {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+    color: $color-primary;
+    font-size: 3.3rem;
+    animation-fill-mode: backwards;
+}
+
+@mixin styleHeader {
+    color: $color-heading;
+    font-size: 6.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    font-weight: 100;
+}
+
+@mixin styleSubHeader {
+    color: $color-heading;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: .1rem;
+    font-weight: 100;
+}
+
+@mixin verticalSpacing {
+    margin-bottom: 12rem;
+}
+
+@mixin verticalSpacingSmall {
+    margin-bottom: 6rem;
+}
+
+@mixin styleBuiltWith {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    max-width: 8.6rem;
+}
+
+@mixin styleBuiltWithSpan {
+    display: block;
+    font-size: 1.8rem;
+    margin-top: -.5rem;
+}
+
+*,
+*::after,
+*::before {
+    @include normalize;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: $color-bg;
+    color: $color-primary;
+    font-size: 2.4rem;
+    position: relative;
+    overflow-x: hidden; // Hides horizontal scroll introduced by the left: setting in .Hero
+}
+
+.Wrapper {
+    // max-width: 140rem;
+    max-width: 65%;
+    margin: 0 auto;
+}
+
+h1 {
+    @include styleHeader();
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+
+.Spaceship {
+    display: flex;
+    justify-content: center;
+    
+    .Spaceship-img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+
+p {
+    max-width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.Home-btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    transition: all 200ms linear;
+    transform: translate(0);
+    box-shadow: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: $color-primary;
+    @include styleButton();
+    transition: all 200ms linear;
+    transform: translate(0);
+    box-shadow: none;   
+    
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
+        padding: 1rem 7rem;
+        transition: padding 200ms linear;
+    }
+    
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+}

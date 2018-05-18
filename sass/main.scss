@@ -324,6 +324,26 @@ body {
 	transform: translateX(0px);
 }
 
+// Class is toggled in JS for sticky nav
+
+.Sticky {
+    position: fixed;
+    height: 8rem;
+    top: 0;
+    background: $color-bg-light;
+    z-index: 999;
+
+    .Navbar {
+        height: 8rem;
+        top: 0;
+    }
+
+    .Logo {
+        height: 8rem;
+        cursor: pointer;
+    }
+}
+
 .Down-arrow {
     width: 4.5rem;
     position: absolute;

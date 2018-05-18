@@ -17,8 +17,18 @@ const bottomOfHero = hero.getBoundingClientRect().bottom;
 const wrapper = document.querySelector('.Wrapper');
 const contact = document.querySelector('.Contact');
 
+
+const navHeight = 100;
+
 function aboutScroll() {
-    intro.scrollIntoView({ block: 'start', behavior: 'smooth'});
+    intro.scrollIntoView({block: 'start', behavior: 'smooth'});
+    let shadow = window.scrollY;
+
+    console.log(shadow);
+
+    if (shadow) {
+        window.scroll(0, shadow - navHeight);
+    }
 }
 
 function projectScroll() {
@@ -38,23 +48,9 @@ function logoScroll() {
 
 function stickyNav() {
     if (window.scrollY >= bottomOfHero) {
-        navCont.style.position = 'fixed';
-        navCont.style.height = '8rem';
-        nav.style.height = '8rem';
-        navCont.style.top = '0';
-        nav.style.top = '0';
-        navCont.style.background = '#3B3D3E';
-        navCont.style.zIndex = '999';
-        logo.style.height = '8rem';
-        logo.style.cursor = 'pointer';
+        navCont.classList.add('Sticky');
     } else {
-        navCont.style.position = '';
-        navCont.style.height = '';
-        nav.style.height = '';
-        navCont.style.top = '';
-        nav.style.top = '';
-        navCont.style.background = '';
-        logo.style.height = '';
+        navCont.classList.remove('Sticky');
     }
 }
 

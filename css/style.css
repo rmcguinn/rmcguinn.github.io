@@ -294,9 +294,11 @@ body {
     margin-bottom: 12rem; }
 
 .Project-img-container {
-  position: relative; }
+  position: relative;
+  width: 50%;
+  margin: auto 0; }
   .Project-img-container img {
-    max-width: 72.2rem;
+    width: 100%;
     cursor: pointer; }
   .Project-img-container .Imagez-hover {
     position: absolute;
@@ -316,7 +318,10 @@ body {
 .Inner {
   width: 50%;
   margin-left: 3rem;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; }
   .Inner p, .Inner h4 {
     text-align: center;
     margin: 0 auto; }
@@ -328,7 +333,7 @@ body {
     text-align: center;
     letter-spacing: .1rem;
     font-weight: 100;
-    position: absolute;
+    font-size: 2.6rem;
     bottom: 16rem;
     margin: 0 auto;
     left: 0;
@@ -341,8 +346,7 @@ body {
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  max-width: 8.6rem;
-  margin: 0 2.5rem; }
+  max-width: 8.6rem; }
   .JS span,
   .CSS span,
   .HTML span,
@@ -354,16 +358,13 @@ body {
   .CSS img,
   .HTML img,
   .Bootstrap img {
-    height: 8.6rem; }
+    height: 7rem; }
 
 .Inner-tech {
   padding: 0 2.5rem;
   display: flex;
-  position: absolute;
-  bottom: .4rem;
-  align-items: flex-end;
-  width: 100%;
-  justify-content: center; }
+  max-width: 100%;
+  justify-content: space-around; }
 
 .Github {
   margin-bottom: 12rem; }
@@ -425,12 +426,13 @@ body {
 
 .Plop-container {
   display: flex;
-  max-width: 100%;
-  height: auto;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 12rem; }
   .Plop-container img {
-    height: 100%; }
+    min-width: 0;
+    width: 100%;
+    height: auto; }
 
 .Adobe-tech-container h2 {
   color: #fcc42c;
@@ -591,13 +593,13 @@ footer {
     font-size: 2rem; }
   footer .Footer-built-with {
     font-size: 2rem;
-    margin-bottom: 0; }
+    margin-bottom: 2rem; }
   footer .Footer-tech {
     display: flex;
     justify-content: space-around;
     width: 15%; }
     footer .Footer-tech img {
-      max-width: 4.5rem; }
+      max-height: 4.5rem; }
 
 ::-webkit-scrollbar {
   width: 8px;

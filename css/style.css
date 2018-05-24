@@ -629,7 +629,11 @@ footer {
   .Wrapper {
     max-width: 80%; }
   .Intro-flex-container {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
+    .Intro-flex-container .Hello-img {
+      width: 50%;
+      margin-bottom: 6rem; }
   .Responsive-container p {
     width: 85%; }
   .Project {
@@ -654,9 +658,27 @@ footer {
   .Technologies-images img {
     height: 10rem; }
   .Technologies-images span {
-    font-size: 2.2rem; } }
+    font-size: 2.2rem; }
+  .Adobe-tech span {
+    font-size: 2.1rem; }
+  .Intro-container h2 {
+    font-size: 5.4rem; }
+  .Responsive-container h2 {
+    font-size: 5.4rem; }
+  .Dev-container h2 {
+    font-size: 5.4rem; }
+  .Technologies h3 {
+    font-size: 5.4rem; }
+  .Design-container h3 {
+    font-size: 5.4rem; }
+  .Adobe-tech-container h2 {
+    font-size: 5.4rem; }
+  .Contact h2 {
+    font-size: 5.4rem; } }
 
 @media screen and (min-width: 901px) and (max-width: 1140px) {
+  body {
+    font-size: 2.2rem; }
   .Wrapper {
     max-width: 80%; }
   .Intro-flex-container {
@@ -666,11 +688,35 @@ footer {
       width: 55%;
       display: block;
       margin-bottom: 6rem; }
+  .Responsive-container p {
+    width: 65%; }
   .Inner-tech {
     justify-content: center; }
     .Inner-tech .JS,
     .Inner-tech .CSS,
     .Inner-tech .Bootstrap {
       margin-right: 2rem; }
-  .Responsive-container p {
-    width: 65%; } }
+  .Intro-container h2 {
+    font-size: 5.8rem; }
+  .Responsive-container h2 {
+    font-size: 5.8rem; }
+  .Dev-container h2 {
+    font-size: 5.8rem; }
+  .Technologies h3 {
+    font-size: 5.8rem; }
+  .Design-container h3 {
+    font-size: 5.8rem; }
+  .Adobe-tech-container h2 {
+    font-size: 5.8rem; }
+  .Contact h2 {
+    font-size: 5.8rem; }
+  footer .Social-icons {
+    justify-content: space-between;
+    width: 25%; }
+  footer .Footer-tech {
+    justify-content: space-between;
+    width: 25%; } }
+
+@media screen and (min-width: 701px) and (max-width: 1500px) {
+  .Contact .Download a {
+    max-width: 60%; } }

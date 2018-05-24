@@ -299,6 +299,7 @@ body {
   margin: auto 0; }
   .Project-img-container img {
     width: 100%;
+    min-width: 100%;
     cursor: pointer; }
   .Project-img-container .Imagez-hover {
     position: absolute;
@@ -621,3 +622,55 @@ footer {
     height: 55px; }
   .Adobe-tech img {
     height: 55px; } }
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 55%; }
+  .Wrapper {
+    max-width: 80%; }
+  .Intro-flex-container {
+    flex-direction: column; }
+  .Responsive-container p {
+    width: 85%; }
+  .Project {
+    flex-direction: column; }
+    .Project p {
+      width: 80%; }
+  .Project-img-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem; }
+  .Inner {
+    width: 100%;
+    margin: 0; }
+    .Inner p, .Inner h4 {
+      margin-bottom: 2rem; }
+  .Inner-tech {
+    justify-content: center; }
+    .Inner-tech .JS,
+    .Inner-tech .CSS,
+    .Inner-tech .Bootstrap {
+      margin-right: 2rem; }
+  .Technologies-images img {
+    height: 10rem; }
+  .Technologies-images span {
+    font-size: 2.2rem; } }
+
+@media screen and (min-width: 901px) and (max-width: 1140px) {
+  .Wrapper {
+    max-width: 80%; }
+  .Intro-flex-container {
+    flex-direction: column;
+    align-items: center; }
+    .Intro-flex-container .Hello-img {
+      width: 55%;
+      display: block;
+      margin-bottom: 6rem; }
+  .Inner-tech {
+    justify-content: center; }
+    .Inner-tech .JS,
+    .Inner-tech .CSS,
+    .Inner-tech .Bootstrap {
+      margin-right: 2rem; }
+  .Responsive-container p {
+    width: 65%; } }

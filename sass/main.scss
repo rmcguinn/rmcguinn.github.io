@@ -327,18 +327,20 @@ body {
 // Class is toggled in JS for sticky nav
 
 .Sticky {
+    display: flex;
     position: fixed;
-    height: 8rem;
+    height: 10rem;
     top: 0;
     background: $color-bg-light;
     z-index: 999;
 
     .Navbar {
-        height: 8rem;
+        height: 100%;
         top: 0;
     }
 
     .Logo {
+        margin: auto 0;
         height: 8rem;
         cursor: pointer;
     }
@@ -554,7 +556,13 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     // position: absolute;
     // bottom: .4rem;
     max-width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+
+    .JS,
+    .CSS,
+    .Bootstrap {
+        margin-right: 3rem;
+    }
 }
 
 .Github {

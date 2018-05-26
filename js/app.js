@@ -14,30 +14,29 @@ const hero = document.querySelector('.Hero');
 const logo = document.querySelector('.Logo');
 let topOfNav = nav.offsetTop;
 const bottomOfHero = hero.getBoundingClientRect().bottom;
-const wrapper = document.querySelector('.Wrapper');
 const contact = document.querySelector('.Contact');
-
-
+const wrapper = document.querySelector('.Wrapper');
 const navHeight = 100;
+let count = intro.offsetTop - wrapper.scrollTop - navHeight;
+
+const responsiveContainer = document.querySelector('.Responsive-container');
 
 function aboutScroll() {
     intro.scrollIntoView({block: 'start', behavior: 'smooth'});
-    let shadow = window.scrollY;
-
-    console.log(shadow);
-
-    if (shadow) {
-        window.scroll(0, shadow - navHeight);
+    // intro.scrollIntoView(true);
+    
+    // let scrolledY = window.scrollY;
+    
+    // if(scrolledY) {
+        //     window.scroll(0,scrolledY - 100);
+        // }
     }
-}
-
+    
 function projectScroll() {
-    console.log('Portfolio');
     projects.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
 
 function contactScroll() {
-    console.log('Contact');
     contact.scrollIntoView({ block: 'start', behavior: 'smooth'});
 }
 
@@ -49,7 +48,8 @@ function logoScroll() {
 function stickyNav() {
     if (window.scrollY >= bottomOfHero) {
         navCont.classList.add('Sticky');
-    } else {
+    } 
+    else {
         navCont.classList.remove('Sticky');
     }
 }

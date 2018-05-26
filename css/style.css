@@ -182,15 +182,17 @@ body {
   transform: translateX(0px); }
 
 .Sticky {
+  display: flex;
   position: fixed;
-  height: 8rem;
+  height: 10rem;
   top: 0;
   background: #3B3D3E;
   z-index: 999; }
   .Sticky .Navbar {
-    height: 8rem;
+    height: 100%;
     top: 0; }
   .Sticky .Logo {
+    margin: auto 0;
     height: 8rem;
     cursor: pointer; }
 
@@ -365,7 +367,11 @@ body {
   padding: 0 2.5rem;
   display: flex;
   max-width: 100%;
-  justify-content: space-around; }
+  justify-content: center; }
+  .Inner-tech .JS,
+  .Inner-tech .CSS,
+  .Inner-tech .Bootstrap {
+    margin-right: 3rem; }
 
 .Github {
   margin-bottom: 12rem; }

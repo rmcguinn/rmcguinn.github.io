@@ -16,33 +16,53 @@ let topOfNav = nav.offsetTop;
 const bottomOfHero = hero.getBoundingClientRect().bottom;
 const contact = document.querySelector('.Contact');
 const wrapper = document.querySelector('.Wrapper');
-const navHeight = 100;
-let count = intro.offsetTop - wrapper.scrollTop - navHeight;
+const navOffset = 120;
+let count = intro.offsetTop - wrapper.scrollTop - navOffset;
 
 const responsiveContainer = document.querySelector('.Responsive-container');
 
 function aboutScroll() {
-    intro.scrollIntoView({block: 'start', behavior: 'smooth'});
-    // intro.scrollIntoView(true);
+    // intro.scrollIntoView({block: 'start', behavior: 'smooth'});
+    intro.scrollIntoView(true);
     
-    // let scrolledY = window.scrollY;
+    let scrolledY = window.scrollY;
     
-    // if(scrolledY) {
-        //     window.scroll(0,scrolledY - 100);
-        // }
+    if(scrolledY) {
+        window.scroll(0,scrolledY - navOffset);
     }
+}
     
 function projectScroll() {
-    projects.scrollIntoView({ block: 'start', behavior: 'smooth'});
+    // projects.scrollIntoView({ block: 'start', behavior: 'smooth'});
+    projects.scrollIntoView(true);
+    
+    let scrolledY = window.scrollY;
+    
+    if(scrolledY) {
+        window.scroll(0,scrolledY - navOffset);
+    }
 }
 
 function contactScroll() {
-    contact.scrollIntoView({ block: 'start', behavior: 'smooth'});
+    // contact.scrollIntoView({ block: 'start', behavior: 'smooth'});
+    contact.scrollIntoView(true);
+    
+    let scrolledY = window.scrollY;
+    
+    if(scrolledY) {
+        window.scroll(0,scrolledY - navOffset);
+    }
 }
 
 function logoScroll() {
-    // document.body.scrollTop = document.documentElement.scrollTop = 0;
-    document.body.scrollIntoView({ block: 'start', behavior: 'smooth'});
+    // document.body.scrollIntoView({ block: 'start', behavior: 'smooth'});
+    document.body.scrollIntoView(true);
+    
+    let scrolledY = window.scrollY;
+    
+    if(scrolledY) {
+        window.scroll(0,scrolledY - navOffset);
+    }
 }
 
 function stickyNav() {

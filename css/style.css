@@ -81,7 +81,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  width: 80%; }
   .Title-Card h1 {
     font-size: 7.2rem; }
   .Title-Card .Name {
@@ -241,10 +242,7 @@ body {
         color: #29e4de; }
 
 .Skills-container {
-  max-height: 100rem;
   position: relative;
-  background-size: cover;
-  background-position: center;
   padding-top: calc(10rem - 2rem);
   display: flex;
   justify-content: space-between;
@@ -406,8 +404,12 @@ body {
   display: flex;
   justify-content: space-around;
   margin-bottom: 12rem; }
+  .Technologies-images .Tech {
+    display: flex;
+    flex-direction: column; }
   .Technologies-images img {
-    height: 13rem; }
+    height: 13rem;
+    margin-bottom: 1rem; }
   .Technologies-images span {
     text-align: center;
     display: block;
@@ -455,8 +457,12 @@ body {
   display: flex;
   justify-content: space-around;
   margin-bottom: 12rem; }
+  .Adobe-tech .Adobe {
+    display: flex;
+    flex-direction: column; }
   .Adobe-tech img {
-    height: 10rem; }
+    height: 10rem;
+    margin-bottom: 1rem; }
   .Adobe-tech span {
     display: block;
     font-size: 1.8rem;
@@ -634,6 +640,8 @@ footer {
     font-size: 55%; }
   .Wrapper {
     max-width: 80%; }
+  .Title-card h1 {
+    font-size: 6.5rem; }
   .Intro-flex-container {
     flex-direction: column;
     align-items: center; }
@@ -641,11 +649,16 @@ footer {
       width: 50%;
       margin-bottom: 6rem; }
   .Responsive-container p {
-    width: 85%; }
+    width: 100%; }
+  .Skills-container h3 {
+    font-size: 5rem; }
+  .Skills-container img {
+    height: 13rem; }
   .Project {
     flex-direction: column; }
     .Project p {
-      width: 80%; }
+      width: 80%;
+      margin-top: 0; }
   .Project-img-container {
     width: 80%;
     margin: 0 auto;
@@ -682,6 +695,45 @@ footer {
   .Contact h2 {
     font-size: 5.4rem; } }
 
+@media screen and (max-width: 1140px) {
+  .Skills-container {
+    flex-direction: column;
+    align-items: center; }
+    .Skills-container .Skill-1,
+    .Skills-container .Skill-2,
+    .Skills-container .Skill-3 {
+      width: 80%; }
+    .Skills-container .Skill-1,
+    .Skills-container .Skill-2 {
+      margin-bottom: 6rem; } }
+
+@media screen and (max-width: 900px) {
+  .Burger-nav-container {
+    height: 15rem;
+    background: darkgray; }
+    .Burger-nav-container img {
+      height: 6rem; }
+  .Navbar {
+    display: none; } }
+
+@media screen and (max-width: 720px) {
+  .Skills-container .Skill-1,
+  .Skills-container .Skill-2,
+  .Skills-container .Skill-3 {
+    width: 100%; }
+  .Technologies-images img {
+    height: 8rem; }
+  .Adobe-tech img {
+    height: 8rem; }
+  .Adobe-tech span {
+    font-size: 1.8rem; }
+  .Contact .Download a {
+    max-width: 100%; }
+  footer .Social-icons {
+    width: 40%; }
+  footer .Footer-tech {
+    width: 40%; } }
+
 @media screen and (min-width: 901px) and (max-width: 1140px) {
   body {
     font-size: 2.2rem; }
@@ -696,6 +748,10 @@ footer {
       margin-bottom: 6rem; }
   .Responsive-container p {
     width: 65%; }
+  .Skills-container h3 {
+    font-size: 5rem; }
+  .Skills-container img {
+    height: 15rem; }
   .Inner-tech {
     justify-content: center; }
     .Inner-tech .JS,
@@ -715,7 +771,9 @@ footer {
   .Adobe-tech-container h2 {
     font-size: 5.8rem; }
   .Contact h2 {
-    font-size: 5.8rem; }
+    font-size: 5.8rem; } }
+
+@media screen and (min-width: 721px) and (max-width: 1140px) {
   footer .Social-icons {
     justify-content: space-between;
     width: 25%; }
@@ -723,6 +781,6 @@ footer {
     justify-content: space-between;
     width: 25%; } }
 
-@media screen and (min-width: 701px) and (max-width: 1500px) {
+@media screen and (min-width: 721px) and (max-width: 1500px) {
   .Contact .Download a {
     max-width: 60%; } }

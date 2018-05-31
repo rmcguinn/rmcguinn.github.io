@@ -123,6 +123,9 @@ body {
   margin-left: -7.8rem;
   padding-left: 7.8rem; }
 
+.Burger-nav-container {
+  display: none; }
+
 .Navbar {
   position: absolute;
   height: 15rem;
@@ -709,12 +712,19 @@ footer {
 
 @media screen and (max-width: 900px) {
   .Burger-nav-container {
-    height: 15rem;
-    background: darkgray; }
+    display: inline-flex;
+    position: absolute;
+    right: 7.8rem;
+    top: 7.8rem;
+    align-items: center;
+    height: 15rem; }
     .Burger-nav-container img {
-      height: 6rem; }
+      height: 6rem;
+      cursor: pointer; }
   .Navbar {
-    display: none; } }
+    height: 0;
+    top: calc(7.8rem + 100px);
+    overflow: hidden; } }
 
 @media screen and (max-width: 720px) {
   .Skills-container .Skill-1,

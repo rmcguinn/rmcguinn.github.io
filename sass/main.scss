@@ -261,6 +261,10 @@ body {
     padding-left: $padding-hero;
 }
 
+.Burger-nav-container {
+    display: none;
+}
+
 .Navbar {
     // padding: inherit;
     position: absolute;
@@ -1064,16 +1068,24 @@ footer {
 
 @media screen and (max-width: 900px) {
     .Burger-nav-container {
+        display: inline-flex;
+        position: absolute;
+        right: $padding-hero;
+        top: $padding-hero;
+        align-items: center;
         height: 15rem;
-        background: darkgray;
 
         img {
             height: 6rem;
+            cursor: pointer;
         }    
     }
 
     .Navbar {
-        display: none;
+        // display: none;
+        height: 0;
+        top: calc(#{$padding-hero} + 100px);
+        overflow: hidden;
     }
 }
 

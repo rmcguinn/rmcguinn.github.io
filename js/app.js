@@ -16,6 +16,7 @@ let topOfNav = nav.offsetTop;
 const bottomOfHero = hero.getBoundingClientRect().bottom;
 const contact = document.querySelector('.Contact');
 const wrapper = document.querySelector('.Wrapper');
+// const burger = document.querySelector('.Burger-nav');
 const navOffset = 120;
 let count = intro.offsetTop - wrapper.scrollTop - navOffset;
 
@@ -74,6 +75,16 @@ function stickyNav() {
     }
 }
 
+// function burgerNav() {
+//     nav.classList.toggle('.Opened');
+//     if (nav.classList.contains('.Opened')) {
+//         nav.style.display = 'block';
+//     } else {
+//         nav.style.display = 'none';
+//     }
+//     // console.log('🍔🍔🍔🍔🍔');
+// }
+
 window.addEventListener('scroll', stickyNav);
 logo.addEventListener('click', logoScroll);
 aboutNav.addEventListener('click', aboutScroll);
@@ -81,3 +92,4 @@ projectsNav.addEventListener('click', projectScroll);
 contactNav.addEventListener('click', contactScroll);
 downArrow.addEventListener('click', aboutScroll);
 contactBtn.addEventListener('click', contactScroll);
+// burger.addEventListener('click', burgerNav);

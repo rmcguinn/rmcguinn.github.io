@@ -261,9 +261,21 @@ body {
     padding-left: $padding-hero;
 }
 
-.Burger-nav-container {
-    display: none;
-}
+// .Burger-nav-container {
+//     display: none;
+//     position: absolute;
+//     right: $padding-hero;
+//     top: $padding-hero;
+//     align-items: center;
+//     height: 15rem;
+
+//     img {
+//         display: none;
+//         height: 3.5rem;
+//         cursor: pointer;
+//         z-index: 100;
+//     }    
+// }
 
 .Navbar {
     // padding: inherit;
@@ -326,6 +338,27 @@ body {
 	transform: translateX(0px);
 }
 
+// .Opened {
+//     position: fixed;
+//     height: 100vh;
+//     width: 100%;
+//     right: 0;
+//     top: 0;
+//     background: $color-bg-light;
+
+//     ul {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     li {
+//         display: block;
+//     }
+// }
+
+
+
 // Class is toggled in JS for sticky nav
 
 .Sticky {
@@ -333,6 +366,7 @@ body {
     position: fixed;
     height: 10rem;
     top: 0;
+    right: 0;
     background: $color-bg-light;
     z-index: 999;
 
@@ -346,6 +380,11 @@ body {
         height: 8rem;
         cursor: pointer;
     }
+
+    // .Burger-nav-container {
+    //     height: 100%;
+    //     top: 0; 
+    // }
 }
 
 .Down-arrow {
@@ -928,6 +967,12 @@ footer {
             font-size: 6.5rem;
         }
     }
+    
+    .Navbar {
+        li {
+            margin-left: 1rem;
+        }
+    }
 
     .Intro-flex-container {
         flex-direction: column;
@@ -1066,30 +1111,63 @@ footer {
     }
 }
 
-@media screen and (max-width: 900px) {
-    .Burger-nav-container {
-        display: inline-flex;
-        position: absolute;
-        right: $padding-hero;
-        top: $padding-hero;
-        align-items: center;
-        height: 15rem;
+// @media screen and (max-width: 900px) {
+//     .Burger-nav-container {
+//         display: inline-flex;
 
-        img {
-            height: 6rem;
-            cursor: pointer;
-        }    
-    }
+//         img {
+//             display: block;
+//         }
+//     }
 
-    .Navbar {
-        // display: none;
-        height: 0;
-        top: calc(#{$padding-hero} + 100px);
-        overflow: hidden;
-    }
-}
+//     .Navbar {
+//         display: none;
+//     }
+
 
 @media screen and (max-width: 720px) {
+    body {
+        font-size: 2rem;
+    }
+    
+    .Hero {
+        padding-left: calc(#{$padding-hero} / 2);
+        padding-right: calc(#{$padding-hero} / 2);  
+    }
+    
+    .Title-Card {
+        h1 {
+            font-size: 6.2rem;
+        }
+
+        .Contact-btn {
+            font-size: 3.8rem;
+        }
+    }
+
+    .Logo {
+        height: 13rem;
+    }
+    
+    .Navbar {
+        height: 13rem;
+        right: calc(#{$padding-hero} / 2);
+        
+        li {
+            margin-left: 0;
+        }
+        
+        a {
+            font-size: 2.8rem;
+        }
+    }
+
+    .Github {
+        .Github-img {
+            max-height: 11rem;
+        }
+    }
+    
     .Skills-container {
         .Skill-1,
         .Skill-2,
@@ -1097,23 +1175,23 @@ footer {
             width: 100%;
         }
     }
-
+    
     .Technologies-images {
         img {
             height: 8rem;
         }
     }
-
+    
     .Adobe-tech {
         img {
             height: 8rem;
         }
-
+        
         span {
             font-size: 1.8rem;
         }
     }
-
+    
     .Contact {
         .Download {
             a {
@@ -1121,7 +1199,7 @@ footer {
             }
         }
     }
-
+    
     footer {
         .Social-icons {
             width: 40%;
@@ -1129,6 +1207,25 @@ footer {
         
         .Footer-tech {
             width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+    .Navbar {
+        a {
+            font-size: 2.4rem;
+        }
+    }
+
+    .Skills-container {
+        img {
+            height: 11rem;
         }
     }
 }
@@ -1141,7 +1238,6 @@ footer {
     .Wrapper {
         max-width: 80%;
     }
-
     
     .Intro-flex-container {
         flex-direction: column;
@@ -1246,5 +1342,3 @@ footer {
         }
     }
 }
-
-// End of media queries

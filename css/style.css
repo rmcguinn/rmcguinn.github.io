@@ -123,9 +123,6 @@ body {
   margin-left: -7.8rem;
   padding-left: 7.8rem; }
 
-.Burger-nav-container {
-  display: none; }
-
 .Navbar {
   position: absolute;
   height: 15rem;
@@ -190,6 +187,7 @@ body {
   position: fixed;
   height: 10rem;
   top: 0;
+  right: 0;
   background: #3B3D3E;
   z-index: 999; }
   .Sticky .Navbar {
@@ -645,6 +643,8 @@ footer {
     max-width: 80%; }
   .Title-card h1 {
     font-size: 6.5rem; }
+  .Navbar li {
+    margin-left: 1rem; }
   .Intro-flex-container {
     flex-direction: column;
     align-items: center; }
@@ -710,23 +710,27 @@ footer {
     .Skills-container .Skill-2 {
       margin-bottom: 6rem; } }
 
-@media screen and (max-width: 900px) {
-  .Burger-nav-container {
-    display: inline-flex;
-    position: absolute;
-    right: 7.8rem;
-    top: 7.8rem;
-    align-items: center;
-    height: 15rem; }
-    .Burger-nav-container img {
-      height: 6rem;
-      cursor: pointer; }
-  .Navbar {
-    height: 0;
-    top: calc(7.8rem + 100px);
-    overflow: hidden; } }
-
 @media screen and (max-width: 720px) {
+  body {
+    font-size: 2rem; }
+  .Hero {
+    padding-left: calc(7.8rem / 2);
+    padding-right: calc(7.8rem / 2); }
+  .Title-Card h1 {
+    font-size: 6.2rem; }
+  .Title-Card .Contact-btn {
+    font-size: 3.8rem; }
+  .Logo {
+    height: 13rem; }
+  .Navbar {
+    height: 13rem;
+    right: calc(7.8rem / 2); }
+    .Navbar li {
+      margin-left: 0; }
+    .Navbar a {
+      font-size: 2.8rem; }
+  .Github .Github-img {
+    max-height: 11rem; }
   .Skills-container .Skill-1,
   .Skills-container .Skill-2,
   .Skills-container .Skill-3 {
@@ -743,6 +747,15 @@ footer {
     width: 40%; }
   footer .Footer-tech {
     width: 40%; } }
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.8rem;
+    line-height: 1.5; }
+  .Navbar a {
+    font-size: 2.4rem; }
+  .Skills-container img {
+    height: 11rem; } }
 
 @media screen and (min-width: 901px) and (max-width: 1140px) {
   body {

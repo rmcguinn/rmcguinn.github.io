@@ -77,6 +77,10 @@ $bg-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     margin-bottom: 6rem;
 }
 
+@mixin verticalSpacingTiny {
+    margin-bottom: 3rem;
+}
+
 @mixin styleBuiltWith {
     vertical-align: top;
     display: inline-block;
@@ -199,7 +203,6 @@ body {
 }
 
 .Logo {
-    // TODO 
     display: block;
     height: 15rem;
 }
@@ -244,7 +247,7 @@ body {
         transform: translateY(-.3rem);
         box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
         padding: 1rem 7rem;
-        transition: padding 200ms linear;
+        transition: all 200ms linear;
     }
 
     .Contact-btn:active {
@@ -453,7 +456,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
     // max-height: 100rem;
     position: relative;
     // padding: $skills-container-padding; 
-    padding-top: calc(#{$skills-container-padding} - 2rem);
+    // padding-top: calc(#{$skills-container-padding} - 2rem);
     display: flex;
     justify-content: space-between;
     @include verticalSpacing();
@@ -468,7 +471,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 
     img {
         display: block;
-        max-height: 18.5rem;
+        max-height: 13rem;
         width: auto;
         margin: 8rem auto;
     }
@@ -673,7 +676,7 @@ $skills-container-padding: 10rem; // This is to account for the dead space from 
 
     img {
         min-width: 0;
-        width: 100%;
+        width: 31%;
         height: auto;
     }
 }
@@ -922,37 +925,6 @@ footer {
 
 // Start of media queries
 
-@media screen and (max-width: 400px) {
-    html {
-        font-size: 20%;
-    }
-
-    .Plop-container {
-        flex-direction: column;
-    }
-
-    .Hero {
-        height: 100vw;
-    }
-
-    .Project {
-        flex-wrap: wrap;
-    }
-
-    .Technologies-images {
-        img {
-            height: 55px;
-        }
-    }
-
-    .Adobe-tech {
-        img {
-            height: 55px;
-        }
-    }
-}
-
-
 @media screen and (max-width: 900px) {
     html {
         font-size: 55%;
@@ -996,7 +968,7 @@ footer {
         }
         
         img {
-            height: 13rem;
+            height: 10rem;
         }
     }
     
@@ -1146,11 +1118,11 @@ footer {
     }
 
     .Logo {
-        height: 13rem;
+        height: 11.5rem;
     }
     
     .Navbar {
-        height: 13rem;
+        height: 11.5rem;
         right: calc(#{$padding-hero} / 2);
         
         li {
@@ -1159,6 +1131,14 @@ footer {
         
         a {
             font-size: 2.8rem;
+        }
+    }
+
+    .Project {
+        .Inner {
+            h4 {
+            font-size: 2rem;
+            }    
         }
     }
 
@@ -1217,6 +1197,10 @@ footer {
         line-height: 1.5;
     }
 
+    .Wrapper {
+        max-width: 90%;
+    }
+
     .Navbar {
         a {
             font-size: 2.4rem;
@@ -1224,10 +1208,216 @@ footer {
     }
 
     .Skills-container {
+        h3 {
+            font-size: 3.5rem;
+        }
+        
         img {
-            height: 11rem;
+            height: 9rem;
+            margin: 4rem auto;
         }
     }
+
+    .Technologies-images {
+        img {
+            height: 7rem;
+        }
+
+        span {
+            font-size: 1.8rem;
+        }
+    }
+
+    .Adobe-tech {
+        img {
+            height: 6.5rem;
+        }
+
+        span {
+            font-size: 1.6rem;
+        }
+    }
+
+    .JS img, 
+    .CSS img,
+    .HTML img,
+    .Bootstrap img {
+        height: 5rem;
+    }
+
+    .JS span, 
+    .CSS span,
+    .HTML span,
+    .Bootstrap span {
+        font-size: 1.5rem;
+    }
+
+    .Intro-container h2,
+    .Responsive-container h2,
+    .Dev-container h2,
+    .Technologies h3,
+    .Design-container h3,
+    .Adobe-tech-container h2,
+    .Contact h2 {
+        font-size: 4.6rem;
+    }
+
+    .Intro-container {
+        .Intro-flex-container {
+            .Intro-text {
+                p:nth-child(3) {
+                    @include verticalSpacingSmall();
+                }
+            }
+        }
+    }
+
+    .Hero,
+    .Intro-container h2,
+    .Skills-container,
+    .Responsive-container,
+    .Dev-container h2,
+    .Github,
+    .Technologies h3,
+    .Technologies-images,
+    .Design-container h3,
+    .Plop-container,
+    .Adobe-tech-container h2,
+    .Adobe-tech,
+    .Contact h2,
+    .Contact .Download,
+    .Contact form {
+        @include verticalSpacingSmall();
+    }
+
+    .Skills-container {
+        .Skill-1, .Skill-2 {
+            @include verticalSpacingTiny();
+        }
+    }
+
+    .Design-container .GTR {
+        @include verticalSpacingTiny();
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 1.6rem;
+    }
+
+    .Hero {
+        padding-top: calc(#{$padding-hero} / 2);
+        padding-bottom: calc(#{$padding-hero} / 2);
+        padding-left: calc(#{$padding-hero} / 3);
+        padding-right: calc(#{$padding-hero} / 3);
+    }
+
+    .Logo {
+        height: 9rem;
+    }
+
+    .Navbar {
+        height: 9rem;
+        top: calc(#{$padding-hero} / 2);
+
+        .About-nav,
+        .Projects-nav {
+            display: none;
+        }
+
+        a::before {
+            display: none;
+        }
+
+        a::after {
+            display: none;
+        }
+
+        .Contact-nav {
+            padding: .4rem 1.8rem;
+            border: .2rem solid $color-accent;
+            border-radius: 100px;
+            transition: all 200ms linear;
+
+            &:hover {
+                transform: translateY(-.2rem);
+                box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .2);
+                padding: .4rem 2rem;
+                transition: all 200ms linear;
+            }
+        }
+    }
+
+    .Sticky {
+        padding-left: calc(#{$padding-hero} / 2);
+    }
+
+    .Title-Card {
+        width: calc(100% - #{$padding-hero});
+
+        h1 {
+            font-size: 5rem;
+        }
+        
+        .Contact-btn {
+            padding: .8rem 4rem;
+            font-size: 2.8rem;
+            border: .3rem solid $color-accent;
+
+            &:hover {
+                padding: .8rem 5rem;
+            }
+        }
+    }
+
+    .Skills-container {
+        img {
+            height: 7rem;
+        }
+    }
+
+    .Technologies-images {
+        img {
+            height: 5rem;
+        }
+
+        span {
+            font-size: 1.4rem;
+        }
+    }
+
+    .Adobe-tech {
+        img {
+            height: 5rem;
+        }
+
+        span {
+            font-size: 1.4rem;
+        }
+    }
+
+    .Intro-container h2,
+    .Responsive-container h2,
+    .Dev-container h2,
+    .Technologies h3,
+    .Design-container h3,
+    .Adobe-tech-container h2,
+    .Contact h2 {
+        font-size: 3.8rem;
+    }
+
+    footer {
+        .Social-icons {
+            width: 55%;
+        }
+
+        .Footer-tech {
+            width: 55%;
+        }
+    }
+
 }
 
 @media screen and (min-width: 901px) and (max-width: 1140px) {
